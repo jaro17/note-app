@@ -1,0 +1,11 @@
+<p-card [style]="{ width: '70%', margin: '3rem auto', padding: '0'}" *ngFor="let note of notes">
+  <div class="flex flex-column">
+    <div class="flex">
+      <img ngSrc="assets/icons8-angular.svg" height="48" width="48">
+      <div class="text-3xl mt-2 ml-2">{{ note.title }}</div>
+    </div>
+    <p class="mt-3">
+      {{  note.content }}
+    </p>
+  </div>
+</p-card>

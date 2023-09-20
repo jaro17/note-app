@@ -1,0 +1,33 @@
+<div class="note-container flex flex-column w-9 m-auto">
+
+  <div class="notes mt-6  flex flex-column m-auto">
+
+    <h1 class="m-auto">Angular Notes</h1>
+
+    <div class="flex  align-items-center justify-content-between w-29rem mt-5 pl-3 pr-3 shadow-2 border-round-xs">
+      <p class="">5 Notes</p>
+      <p-button label="Create a note" (click)="showDialog()" styleClass="p-button-link"></p-button>
+    </div>
+
+    <div class="card">
+      <p-dialog header="Create a note" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }"
+                [draggable]="false"
+                [resizable]="false">
+
+        <div class="flex flex-column">
+          <input pInputText placeholder="Title." [(ngModel)]="titleInput" (keyup.enter)="addNewNote()"/>
+          <textarea rows="5" cols="30" pInputTextarea [(ngModel)]="contentInput" (keyup.enter)="addNewNote()"
+                    placeholder="Your note."
+                    class="mt-4">
+          </textarea>
+          <p-button label="Add note" class="align-self-end mt-4" (click)="addNewNote()"></p-button>
+        </div>
+
+      </p-dialog>
+    </div>
+
+  </div>
+
+  <app-note [notes]="notes"></app-note>
+
+</div>
