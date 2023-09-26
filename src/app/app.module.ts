@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from "@angular/forms";
+import { NgOptimizedImage } from "@angular/common";
 
 import { AppComponent } from './app.component';
+import { NoteComponent } from './components/note/note.component';
 
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { NoteComponent } from './components/note/note.component';
-import {NgOptimizedImage} from "@angular/common";
-import {DialogModule} from "primeng/dialog";
-import {InputTextModule} from "primeng/inputtext";
+import { DialogModule } from "primeng/dialog";
+import { InputTextModule } from "primeng/inputtext";
 import { InputTextareaModule } from 'primeng/inputtextarea';
-import {FormsModule} from "@angular/forms";
+
+
 
 
 @NgModule({
